@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WareHouse - Shopping cart</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=yes, width=device-width, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:300" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="shortcut icon" href="http://www.francescogiudice.it/codeacademy/ware-house-starting-code/favicon.ico" type="image/x-icon" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/base.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/cart.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="hiddenKeys">
+            <a href="#content-core" accesskey="c">skip to page content</a>
+            <a href="#mainmenu" accesskey="n">skip to navigation menu</a>
+  </div>
+  <div class="container">
+
+    <!-- Header -->
+
+    <header role="banner">
+      <div class="image-container">
+        <a href="index.html" title="Visit WareHouse homepage"><img src="resources/img/home-pinky.png" alt="WareHouse Logo"></a>
+      </div>
+      <div class="search-bar" role="search">
+        <label for="search">Search in this website</label>
+        <input type="text" name="search" id="search" placeholder="Search for items">
+        <a href="" class="icon" title="Submit button"><img src="resources/img/dark-search.png" alt="Search icon"></a>
+      </div>
+      <a href="#" class="button cart" title="Log in" role="button"><span class="screenreader">Login</span> 
+        <i class="fas fa-user"></i>
+      </a>
+      <a href="cart.html" class="button cart" title="Shopping cart" role="button"><span class="screenreader">Cart</span><i class="fas fa-shopping-cart"></i></a>
+    </header>
+    <nav role="navigation" aria-label="Main navigation" id="mainmenu">
+    <a href="#" class="show-menu" id="menu-toggle" aria-expanded="false">
+        <span class="screenreader">Menu</span><i class="fas fa-bars fa-2x"></i>
+      </a>
+      
+      <a href="deals.html">Today's Deals</a>
+      <a href="products.html">All Products</a>
+      <a href="about.html">About Us</a>
+      <a href="sell.html">Sell</a>
+      <a href="#">Help</a>
+    </nav>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $("a.show-menu").click(function(){
+              $(this).toggleClass(" opened");
+               var x = document.getElementById("menu-toggle").getAttribute("aria-expanded");
+               if (x == "true") 
+                {
+                x = "false"
+                } else {
+                x = "true"
+                }
+                document.getElementById("menu-toggle").setAttribute("aria-expanded", x);
+              
+          });
+      });
+    </script>
+        <!-- Cart -->
+
+    <div id="main" class="product-list-section">
+      <h1>Shopping Cart</h1>
+
+    <div class="shopping-cart">
+
+        <div class="row">
+          <div class="image-container">
+            <img src="resources/img/cart/white-console.jpg" alt="Console">
+          </div>
+
+          <div class="description">
+            <h3>White Console</h3>
+            <br>
+            <span class="price">$499</span>
+          </div>
+
+          <div>
+            Quantity <input type="number" name="Quantity" placeholder="1" aria-label="Select quantity for White Console" aria-required="true">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="image-container">
+            <img src="resources/img/cart/yellow-chair.jpg" alt="Yellow chair">
+          </div>
+
+          <div class="description">
+            <h3>Yellow Chair</h3>
+            <br>
+            <span class="price">$189</span>
+          </div>
+
+          <div>
+            Quantity <input type="number" name="Quantity" placeholder="1" aria-label="Select quantity for Yellow Chair" aria-required="true">
+          </div>
+        </div>
+
+        <div class="row" id="no-border">
+          <div class="image-container">
+            <img src="resources/img/cart/wire-stool.jpg" alt="Wire stool">
+          </div>
+
+          <div class="description">
+            <h3>Wire Stool</h3>
+            <br>
+            <span class="price">$75</span>
+          </div>
+
+            <div>
+            Quantity <input type="number" name="Quantity" placeholder="1" aria-label="Select quantity for Wire Stool" aria-required="true">
+          </div>
+        </div>
+
+      <div class="total">
+        <div class="description">
+          <h3>Total</h3>
+          <span class="price">$763.00</span>
+        </div>
+        <a href="" class="button" role="button" title="Checkout">Checkout</a>
+      </div>
+  </div>
+</div>
+
+    <!-- Footer -->
+
+    <footer role="contentinfo">
+      <a href="index.html" title="Visit WareHouse homepage"><img src="resources/img/home-pinky.png" alt="WareHouse Logo"></a>
+      <div class="links" aria-label="About us list">
+        <h4>Get to know us</h4>
+        <a href="about.html">About us</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="#">Investor relations</a>
+        <a href="#">Link</a>
+      </div>
+      <div class="links" aria-label="Make business with us">
+        <h4>Make money with us</h4>
+        <a href="sell.html">Sell on WareHouse</a>
+        <a href="#">Become a vendor</a>
+        <a href="#">Fundraiser events</a>
+        <a href="#">Community outreach</a>
+      </div>
+      <div class="links" aria-label="Help and support list">
+        <h4>Help</h4>
+        <a href="#">Contact us</a>
+        <a href="#">Conditions of use</a>
+        <a href="#">Report a problem</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
